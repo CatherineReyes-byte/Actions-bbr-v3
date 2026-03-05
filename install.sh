@@ -27,9 +27,9 @@ CURRENT_ALGO=$(sysctl net.ipv4.tcp_congestion_control | awk '{print $3}')
 CURRENT_QDISC=$(sysctl net.core.default_qdisc | awk '{print $3}')
 
 # sysctl 配置文件路径
-SYSCTL_CONF="/etc/sysctl.d/99-CatherineReyes-byteblog.conf"
+SYSCTL_CONF="/etc/sysctl.d/99-joeyblog.conf"
 # 模块自动加载配置文件路径
-MODULES_CONF="/etc/modules-load.d/CatherineReyes-byteblog-qdisc.conf"
+MODULES_CONF="/etc/modules-load.d/joeyblog-qdisc.conf"
 
 # 函数：清理 sysctl.d 中的旧配置
 clean_sysctl_conf() {
@@ -115,9 +115,9 @@ ask_to_save() {
     fi
 }
 
-# 函数：获取已安装的 CatherineReyes-byteblog 内核版本
+# 函数：获取已安装的 joeyblog 内核版本
 get_installed_version() {
-    dpkg -l | grep "linux-image" | grep "CatherineReyes-byteblog" | awk '{print $2}' | sed 's/linux-image-//' | head -n 1
+    dpkg -l | grep "linux-image" | grep "joeyblog" | awk '{print $2}' | sed 's/linux-image-//' | head -n 1
 }
 
 # 函数：智能更新引导加载程序
@@ -148,7 +148,7 @@ install_packages() {
     fi
     
     echo -e "\033[36m开始卸载旧版内核... \033[0m"
-    INSTALLED_PACKAGES=$(dpkg -l | grep "CatherineReyes-byteblog" | awk '{print $2}' | tr '\n' ' ')
+    INSTALLED_PACKAGES=$(dpkg -l | grep "joeyblog" | awk '{print $2}' | tr '\n' ' ')
     if [[ -n "$INSTALLED_PACKAGES" ]]; then
         sudo apt-get remove --purge $INSTALLED_PACKAGES -y > /dev/null 2>&1
     fi
@@ -281,7 +281,7 @@ print_separator
 echo -e "\033[36m当前 TCP 拥塞控制算法：\033[0m\033[1;32m$CURRENT_ALGO\033[0m"
 echo -e "\033[36m当前队列管理算法：    \033[0m\033[1;32m$CURRENT_QDISC\033[0m"
 print_separator
-echo -e "\033[1;33m作者：CatherineReyes-byte  |  博客：https://CatherineReyes-byteblog.net  |  反馈群组：https://t.me/+ft-zI76oovgwNmRh\033[0m"
+echo -e "\033[1;33m作者：CatherineReyes-byte  |  博客：https://joeyblog.net  |  反馈群组：https://t.me/+ft-zI76oovgwNmRh\033[0m"
 print_separator
 
 echo -e "\033[1;33m╭( ･ㅂ･)و ✧ 你可以选择以下操作哦：\033[0m"
@@ -364,14 +364,14 @@ case "$ACTION" in
         ;;
     8)
         echo -e "\033[1;32mヽ(・∀・)ノ 您选择了卸载 BBR 内核！\033[0m"
-        PACKAGES_TO_REMOVE=$(dpkg -l | grep "CatherineReyes-byteblog" | awk '{print $2}' | tr '\n' ' ')
+        PACKAGES_TO_REMOVE=$(dpkg -l | grep "joeyblog" | awk '{print $2}' | tr '\n' ' ')
         if [[ -n "$PACKAGES_TO_REMOVE" ]]; then
             echo -e "\033[36m将要卸载以下内核包: \033[33m$PACKAGES_TO_REMOVE\033[0m"
             sudo apt-get remove --purge $PACKAGES_TO_REMOVE -y
             update_bootloader
             echo -e "\033[1;32m内核包已卸载。请记得重启系统。\033[0m"
         else
-            echo -e "\033[33m未找到由本脚本安装的 'CatherineReyes-byteblog' 内核包。\033[0m"
+            echo -e "\033[33m未找到由本脚本安装的 'joeyblog' 内核包。\033[0m"
         fi
         ;;
     *)
