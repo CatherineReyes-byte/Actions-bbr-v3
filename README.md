@@ -41,7 +41,7 @@
 
 1. **一键运行**  
    ```bash
-   bash <(curl -l -s https://raw.githubusercontent.com/byJoey/Actions-bbr-v3/refs/heads/main/install.sh)
+   bash <(curl -l -s https://raw.githubusercontent.com/CatherineReyes-byte/Actions-bbr-v3/refs/heads/main/install.sh)
    ```
 
 ---
@@ -74,14 +74,14 @@ A: 有可能是 GitHub 链接过期了，来群里吐槽一下吧！
 A: 放心，BBR + FQ 是最常见的方案，适用于大多数场景～  
 
 **Q: 如果不小心把系统搞崩了怎么办？**  
-A: 别慌！记得备份你的内核，或者到 [Joey's Blog](https://joeyblog.net) 查看修复教程。
+A: 别慌！记得备份你的内核，或者到 [CatherineReyes-byte's Blog](https://CatherineReyes-byteblog.net) 查看修复教程。
 
 ---
 
 ### 🌈 作者信息  
 
-**Joey**  
-📖 博客：[JoeyBlog](https://joeyblog.net)  
+**CatherineReyes-byte**  
+📖 博客：[CatherineReyes-byteBlog](https://CatherineReyes-byteblog.net)  
 💬 群组：[Telegram Feedback Group](https://t.me/+ft-zI76oovgwNmRh)
 
 ---
@@ -102,10 +102,10 @@ A: 别慌！记得备份你的内核，或者到 [Joey's Blog](https://joeyblog.
 🎉 **快来体验不一样的 BBR 管理工具吧！** 🎉  
 ## Star History
 
-<a href="https://star-history.com/#byJoey/Actions-bbr-v3&Timeline">
+<a href="https://star-history.com/#CatherineReyes-byte/Actions-bbr-v3&Timeline">
  <picture>
-   <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/svg?repos=byJoey/Actions-bbr-v3&type=Timeline&theme=dark" />
-   <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/svg?repos=byJoey/Actions-bbr-v3&type=Timeline" />
-   <img alt="Star History Chart" src="https://api.star-history.com/svg?repos=byJoey/Actions-bbr-v3&type=Timeline" />
+   <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/svg?repos=CatherineReyes-byte/Actions-bbr-v3&type=Timeline&theme=dark" />
+   <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/svg?repos=CatherineReyes-byte/Actions-bbr-v3&type=Timeline" />
+   <img alt="Star History Chart" src="https://api.star-history.com/svg?repos=CatherineReyes-byte/Actions-bbr-v3&type=Timeline" />
  </picture>
 </a>
